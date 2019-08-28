@@ -121,6 +121,7 @@ public   class AccountServiceImpl implements AccountService {
 		for(int i = 0; i <count; i++) {
 			if(accountNum.equals(accounts[i].getAccountNum())) {
 				accounts[i] = accounts[count-1];
+				accounts[count-1] = null;
 				count--;
 				break;
 			}

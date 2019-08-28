@@ -172,6 +172,7 @@ public class MemberServiceImpl implements MemberService {
 			for(; i < custCount; i++) {
 				if(customers[i].getId().equals(param.getId())) {
 					customers[i] = customers[custCount-1];
+					customers[custCount-1] = null;
 					custCount--;
 					break;
 				}
@@ -181,6 +182,7 @@ public class MemberServiceImpl implements MemberService {
 			for(;i<empCount; i++) {
 				if(admins[i].getId().equals(param.getId())) {
 					admins[i] = admins[empCount-1];
+					admins[empCount-1] =null;
 					empCount--;
 					break;
 				}
